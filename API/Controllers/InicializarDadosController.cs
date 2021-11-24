@@ -19,6 +19,15 @@ namespace API.Controllers
         [Route("create")]
         public IActionResult Create()
         {
+            _context.FormasPagamentos.AddRange(new FormaPagamento[]
+                {
+                    new FormaPagamento { FormaPagamentoId = 1, Nome = "Boleto",Descricao="Boleto Bancario de pagamento" },
+                    new FormaPagamento { FormaPagamentoId = 2, Nome = "Cartao Debito",Descricao="Cartao de Debito Visa/Master" },
+                    new FormaPagamento { FormaPagamentoId = 3, Nome = "Cartao Credito",Descricao="Cartao de Credito em ate 12 vezes Visa/Master" },
+                    new FormaPagamento { FormaPagamentoId = 4, Nome = "Vale",Descricao="Vale/Saldo da propria loja" },
+                }
+            );
+
             _context.Categorias.AddRange(new Categoria[]
                 {
                     new Categoria { CategoriaId = 1, Nome = "Computador" },
