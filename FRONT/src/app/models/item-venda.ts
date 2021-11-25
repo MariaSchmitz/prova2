@@ -1,7 +1,7 @@
 import { Produto } from "./produto";
 
 export interface ItemVenda {
-    id?: number;
+    itemVendaId?: number;
     produto: Produto;
     produtoId: number;
     quantidade: number;
